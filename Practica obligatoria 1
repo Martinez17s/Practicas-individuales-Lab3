@@ -1,3 +1,5 @@
+import React from 'react';
+
 const watchList = [
     {
         Title: 'Inception',
@@ -115,8 +117,13 @@ const returnMovieTitle = (watchlist) => {
 
     return watchList
     .filter(movie => movie.Director === 'Christopher Nolan' && parseFloat(movie.imdbRating) > 8.0)
-    .map(movie => movie.Title)
+    .map(movie => movie.Title) => <li key={index}>{movie.Title}</li>);
 }
 
-const titlesArray = returnMovieTitle(watchList);
-console.log(titlesArray);
+const MovieList = () => {
+    const titlesArray = returnMovieTitle(watchList);
+    return <ul>{titlesArray}</ul>;
+};
+
+export default MovieList;
+
