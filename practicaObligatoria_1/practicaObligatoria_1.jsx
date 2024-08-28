@@ -113,17 +113,21 @@ const watchList = [
     },
 ];
 
-const returnMovieTitle = (watchlist) => {
-
+const returnMovieTitle = (watchList) => {
     return watchList
-    .filter(movie => movie.Director === 'Christopher Nolan' && parseFloat(movie.imdbRating) > 8.0)
-    .map(movie => movie.Title) => <li key={index}>{movie.Title}</li>);
-}
+        .filter(movie => movie.Director === 'Christopher Nolan' && parseFloat(movie.imdbRating) > 8.0)
+        .map(movie => movie.Title);
+};
 
 const MovieList = () => {
     const titlesArray = returnMovieTitle(watchList);
-    return <ul>{titlesArray}</ul>;
+    return (
+        <ul>
+            {titlesArray.map((title, index) => (
+                <li key={index}>{title}</li>
+            ))}
+        </ul>
+    );
 };
 
 export default MovieList;
-
