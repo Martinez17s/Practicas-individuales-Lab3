@@ -1,0 +1,64 @@
+.app-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.toDoList {
+  margin-top: 20px;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background-color: #000000;
+}
+
+.list-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+  text-align: center;
+}
+
+.list-items {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list-items li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.items-text {
+  display: flex;
+  align-items: center;
+}
+
+.items-text p {
+  margin: 0;
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff1a1a;
+}
